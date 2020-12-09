@@ -1,6 +1,5 @@
 import discord
 from discord.utils import get
-from credentials import TOKEN
 import datetime as dt
 import os
 
