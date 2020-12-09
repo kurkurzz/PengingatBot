@@ -2,6 +2,7 @@ import discord
 from discord.utils import get
 from credentials import TOKEN
 import datetime as dt
+import os
 
 client = discord.Client()
 
@@ -28,4 +29,4 @@ async def on_ready():
                 await message.add_reaction(emoji)
             await client.close()
 
-client.run(TOKEN)
+client.run(os.environ['TOKEN'])
