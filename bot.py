@@ -26,6 +26,6 @@ async def on_ready():
                 emojis.append(guild_emoji)
             for emoji in emojis:
                 await message.add_reaction(emoji)
-        await client.close()
+    await client.close()
 
 client.run(os.environ['TOKEN'])
