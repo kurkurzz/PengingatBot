@@ -13,7 +13,7 @@ async def on_ready():
             date_now = dt.datetime.now()
             date_end = dt.datetime(year=2021,month=1,day=23)
             days_left = (date_end - date_now).days
-            display_text = f'Hamba hanya nak mengingatkan bahawa sem ni tinggal {days_left} hari lagi.'
+            display_text = f'Hamba hanya nak mengingatkan bahawa sem ni tinggal **{days_left} hari** lagi.'
             if days_left <= 10:
                 display_text += ' Rasa nak terkencing tunggu.'
             elif days_left <= 0:
@@ -26,6 +26,6 @@ async def on_ready():
                 emojis.append(guild_emoji)
             for emoji in emojis:
                 await message.add_reaction(emoji)
-            await client.close()
+        await client.close()
 
 client.run(os.environ['TOKEN'])
